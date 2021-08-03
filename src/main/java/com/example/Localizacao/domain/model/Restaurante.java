@@ -20,8 +20,10 @@ public class Restaurante {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String nome;
 
+    @Column(name = "taxa_frete", nullable = false)
     private BigDecimal taxaFrete;
 
     @JsonIgnore
